@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Pigment.API</RootNamespace>
+    <AssemblyName>Pigment.API</AssemblyName>
+    <UserSecretsId>pigment-api-user-secrets-001</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Authentication -->
+    <PackageReference Include="Microsoft.Identity.Web"                            Version="2.15.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer"    Version="8.0.0" />
+    <!-- EF Core (for PigmentDbContext migration at startup) -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer"          Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design"             Version="8.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <!-- Blob Storage -->
+    <PackageReference Include="Azure.Storage.Blobs"                              Version="12.27.0" />
+    <PackageReference Include="Azure.Identity"                                   Version="1.17.1" />
+    <!-- Swagger -->
+    <PackageReference Include="Swashbuckle.AspNetCore"                           Version="6.9.0" />
+    <!-- Telemetry -->
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore"         Version="2.22.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pigment.Core\Pigment.Core.csproj" />
+    <ProjectReference Include="..\Pigment.Infrastructure\Pigment.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
