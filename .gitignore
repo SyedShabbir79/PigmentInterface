@@ -1,0 +1,44 @@
+## .gitignore for Pigment.API Solution
+
+# Build output
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+!**/packages/repositories.config
+*.nuget/
+
+# Publish output
+publish/
+
+# Secrets - never commit these
+appsettings.Production.json
+secrets.json
+*.pfx
+*.p12
+
+# Test results
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+# OS
+.DS_Store
+Thumbs.db
